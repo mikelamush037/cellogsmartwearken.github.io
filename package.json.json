@@ -1,0 +1,24 @@
+{
+  "name": "cellogsmartwearkenya",
+  "version": "1.0.0",
+  "description": "Kenya's #1 Online Fashion & School Store",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "npm run optimize-images && npm run minify",
+    "optimize-images": "sh scripts/optimize-images.sh",
+    "minify": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o css/style.min.css css/style.css css/responsive.css css/animations.css",
+    "minify-js": "terser js/*.js -o js/app.min.js --compress --mangle",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": ["ecommerce", "kenya", "fashion", "school", "shopping"],
+  "author": "CELLOGSMARTWEAR KENYA",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "gh-pages": "^5.0.0",
+    "live-server": "^1.2.2",
+    "terser": "^5.16.6"
+  }
+}

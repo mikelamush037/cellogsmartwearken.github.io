@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /*?*
+Disallow: /*.json$
+
+Sitemap: https://cellogsmartwearkenya.com/sitemap.xml

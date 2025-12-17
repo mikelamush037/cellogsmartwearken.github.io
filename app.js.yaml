@@ -1,0 +1,32 @@
+title: CELLOGSMARTWEAR KENYA
+description: Kenya's #1 Online Fashion & School Store
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cellogsmartwearkenya.com" # the base hostname & protocol for your site
+
+# Build settings
+theme: null
+plugins: []
+
+# SEO settings
+google_analytics: UA-XXXXX-X # Your Google Analytics ID
+twitter_username: cellogsmartwear
+github_username:  yourusername
+
+# Site settings
+logo: /images/logo.png
+email: info@cellogsmartwearkenya.com
+phone: "+254780259386"
+address: "KOMA Market, Nairobi, Kenya"
+
+# Social links
+social:
+  - name: Facebook
+    url: https://facebook.com/cellogsmartwear
+  - name: Instagram
+    url: https://instagram.com/cellogsmartwear
+  - name: Twitter
+    url: https://twitter.com/cellogsmartwear
+  - name: TikTok
+    url: https://tiktok.com/@cellogsmartwear
+  - name: WhatsApp
+    url: https://wa.me/254780259386

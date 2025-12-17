@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en-KE" dir="ltr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- Primary Meta Tags -->
+    <title>CELLOGSMARTWEAR | Kenya's #1 Online Fashion & School Store</title>
+    <meta name="title" content="CELLOGSMARTWEAR | Kenya's #1 Online Fashion & School Store">
+    <meta name="description" content="Shop fashion & school items in Kenya. Men's wear, women's clothing, kids fashion, school uniforms, shoes, bags. Free Nairobi delivery. Pay with M-Pesa.">
+    <meta name="keywords" content="kenya online shopping, nairobi fashion, school uniforms, mpesa shopping, kenya clothes, shoes nairobi, school bags kenya">
+    <meta name="author" content="CELLOGSMARTWEAR KENYA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cellogsmartwearkenya.com/">
+    <meta property="og:title" content="CELLOGSMARTWEAR | Kenya's #1 Online Fashion & School Store">
+    <meta property="og:description" content="Shop fashion & school items in Kenya. Free Nairobi delivery. Secure M-Pesa payments.">
+    <meta property="og:image" content="https://cellogsmartwearkenya.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cellogsmartwearkenya.com/">
+    <meta property="twitter:title" content="CELLOGSMARTWEAR | Kenya's Top Online Store">
+    <meta property="twitter:description" content="Shop fashion & school items in Kenya. Free Nairobi delivery. Secure M-Pesa payments.">
+    <meta property="twitter:image" content="https://cellogsmartwearkenya.com/images/twitter-image.jpg">
+    
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066cc">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/js/app.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CELLOGSMARTWEAR KENYA",
+        "url": "https://cellogsmartwearkenya.com",
+        "description": "Kenya's leading online fashion and school accessories store",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://cellogsmartwearkenya.com/products.html?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- 🔝 Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <span><i class="fas fa-truck"></i> FREE Delivery in Nairobi for orders over KES 3,000</span>
+                <span><i class="fas fa-shield-alt"></i> 100% Secure M-Pesa Payments</span>
+                <span><i class="fas fa-phone"></i> Call: 0780 259 386</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🏢 Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <!-- Logo -->
+                <a href="/" class="logo" aria-label="CELLOGSMARTWEAR Home">
+                    <div class="logo-icon">
+                        <span class="logo-text">C</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="brand-name">CELLOG<span class="brand-highlight">SMARTWEAR</span></h1>
+                        <p class="tagline">Kenya's Online Fashion Store</p>
+                    </div>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Desktop Navigation & Search -->
+                <div class="header-right">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <form action="/products.html" method="GET" role="search">
+                            <input type="text" 
+                                   name="search" 
+                                   id="searchInput" 
+                                   placeholder="Search for clothes, shoes, school items..."
+                                   aria-label="Search products">
+                            <button type="submit" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
+
+                    <!-- User Actions -->
+                    <div class="user-actions">
+                        <a href="/auth.html" class="user-action" aria-label="Account">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="action-label">Account</span>
+                        </a>
+                        <a href="/wishlist.html" class="user-action" aria-label="Wishlist">
+                            <i class="fas fa-heart"></i>
+                            <span class="action-label">Wishlist</span>
+                        </a>
+                        <button class="user-action cart-action" id="cartButton" aria-label="Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="action-label">Cart</span>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link active" aria-current="page"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/products.html?category=men" class="nav-link"><i class="fas fa-male"></i> Men's Wear</a>
+                        <div class="dropdown-menu">
+                            <a href="/products.html?category=men&type=shirts">Shirts</a>
+                            <a href="/products.html?category=men&type=trousers">Trousers</a>
+                            <a href="/products.html?category=men&type=jeans">Jeans</a>
+                            <a href="/products.html?category=men&type=jackets">Jackets</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/products.html?category=women" class="nav-link"><i class="fas fa-female"></i> Women's Wear</a>
+                        <div class="dropdown-menu">
+                            <a href="/products.html?category=women&type=dresses">Dresses</a>
+                            <a href="/products.html?category=women&type=tops">Tops</a>
+                            <a href="/products.html?category=women&type=skirts">Skirts</a>
+                            <a href="/products.html?category=women&type=blouses">Blouses</a>
+                        </div>
+                    </li>
+                    <li><a href="/products.html?category=kids" class="nav-link"><i class="fas fa-child"></i> Kids</a></li>
+                    <li><a href="/products.html?category=school" class="nav-link"><i class="fas fa-graduation-cap"></i> School</a></li>
+                    <li><a href="/products.html?category=shoes" class="nav-link"><i class="fas fa-shoe-prints"></i> Shoes</a></li>
+                    <li><a href="/upload.html" class="nav-link sell-link"><i class="fas fa-cloud-upload-alt"></i> Sell</a></li>
+                    <li><a href="/products.html?filter=deals" class="nav-link deal-link"><i class="fas fa-fire"></i> Hot Deals</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 🎯 Hero Slider -->
+    <section class="hero-slider" aria-label="Featured promotions">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="slide-content slide-school">
+                        <div class="container">
+                            <div class="slide-text">
+                                <h2>Back to School Sale!</h2>
+                                <p>Get up to 30% off on school uniforms, bags, shoes & accessories</p>
+                                <div class="slide-buttons">
+                                    <a href="/products.html?category=school" class="btn btn-primary">
+                                        <i class="fas fa-graduation-cap"></i> Shop School Items
+                                    </a>
+                                    <a href="/products.html?filter=discount" class="btn btn-outline">View All Deals</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="slide-content slide-fashion">
+                        <div class="container">
+                            <div class="slide-text">
+                                <h2>New Arrivals!</h2>
+                                <p>Latest fashion trends for men & women. Premium quality guaranteed</p>
+                                <div class="slide-buttons">
+                                    <a href="/products.html" class="btn btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Shop Now
+                                    </a>
+                                    <a href="/products.html?category=women" class="btn btn-outline">Women's Collection</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="slide-content slide-mpesa">
+                        <div class="container">
+                            <div class="slide-text">
+                                <h2>Pay with M-Pesa</h2>
+                                <p>Secure & instant payments. Free delivery in Nairobi for orders above KES 3,000</p>
+                                <div class="slide-buttons">
+                                    <a href="/products.html" class="btn btn-primary">
+                                        <i class="fas fa-mobile-alt"></i> Shop Securely
+                                    </a>
+                                    <a href="/how-to-pay.html" class="btn btn-outline">How to Pay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <div class="swiper-button-next" aria-label="Next slide"></div>
+            <div class="swiper-button-prev" aria-label="Previous slide"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- ⚡ Quick Categories -->
+    <section class="section quick-categories">
+        <div class="container">
+            <h2 class="section-title">Shop By Category</h2>
+            <p class="section-subtitle">Browse our wide selection of products</p>
+            
+            <div class="categories-grid">
+                <a href="/products.html?category=men" class="category-card" aria-label="Men's Wear">
+                    <div class="category-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <h3>Men's Wear</h3>
+                    <p>Shirts, Trousers, Jackets</p>
+                    <span class="category-count">45 items</span>
+                </a>
+                
+                <a href="/products.html?category=women" class="category-card" aria-label="Women's Wear">
+                    <div class="category-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Women's Wear</h3>
+                    <p>Dresses, Tops, Skirts</p>
+                    <span class="category-count">62 items</span>
+                </a>
+                
+                <a href="/products.html?category=kids" class="category-card" aria-label="Kids Fashion">
+                    <div class="category-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Kids Fashion</h3>
+                    <p>Clothing for all ages</p>
+                    <span class="category-count">38 items</span>
+                </a>
+                
+                <a href="/products.html?category=school" class="category-card" aria-label="School Items">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>School Items</h3>
+                    <p>Uniforms, Bags, Shoes</p>
+                    <span class="category-count">27 items</span>
+                </a>
+                
+                <a href="/products.html?category=shoes" class="category-card" aria-label="Shoes">
+                    <div class="category-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <h3>Shoes</h3>
+                    <p>All types of footwear</p>
+                    <span class="category-count">34 items</span>
+                </a>
+                
+                <a href="/products.html?category=bags" class="category-card" aria-label="Bags">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Bags</h3>
+                    <p>Handbags, Backpacks</p>
+                    <span class="category-count">22 items</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛍️ Featured Products -->
+    <section class="section featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Best Selling Products</h2>
+                <a href="/products.html" class="view-all">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎓 School Accessories Section -->
+    <section class="section school-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">School Accessories</h2>
+                <p class="section-subtitle">Get ready for the new academic year with our quality school items</p>
+            </div>
+            
+            <div class="products-grid" id="schoolProducts">
+                <!-- School products loaded by JavaScript -->
+            </div>
+            
+            <div class="text-center">
+                <a href="/products.html?category=school" class="btn btn-primary btn-lg">
+                    <i class="fas fa-graduation-cap"></i> View All School Items
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔥 Hot Deals -->
+    <section class="section hot-deals">
+        <div class="container">
+            <div class="deals-header">
+                <h2>Flash Sale <span class="highlight">Ends Soon!</span></h2>
+                <p>Limited time offers. Don't miss out on these incredible deals</p>
+                
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="time-box">
+                        <span class="time-value" id="days">02</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">12</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">45</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">30</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="deals-grid" id="hotDeals">
+                <!-- Hot deals loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 Why Choose Us -->
+    <section class="section why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose CELLOGSMARTWEAR</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Free delivery in Nairobi for orders over KES 3,000. Same-day delivery available.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>Pay with M-Pesa, credit/debit cards or cash on delivery. Your payment is always secure.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy. If you're not satisfied, return for a full refund or exchange.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>All products are quality checked before shipping. Premium materials and craftsmanship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📱 App Download -->
+    <section class="section app-download">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2>Shop On The Go</h2>
+                    <p>Download our app for exclusive deals, faster checkout, order tracking, and personalized recommendations.</p>
+                    <p class="app-offer"><strong>Get KES 500 off your first app order!</strong></p>
+                    
+                    <div class="app-buttons">
+                        <a href="#" class="app-store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="app-store-btn">
+                            <i class="fab fa-app-store"></i>
+                            <div>
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="app-image">
+                    <img src="/images/app-mockup.png" alt="CELLOGSMARTWEAR Mobile App" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 👣 Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">C</div>
+                        <div>
+                            <h3>CELLOG<span>SMARTWEAR</span></h3>
+                            <p class="footer-tagline">Kenya's Online Fashion Store</p>
+                        </div>
+                    </div>
+                    <p class="footer-about">Kenya's leading online fashion & school accessories store. We deliver quality, affordable fashion for the whole family with secure M-Pesa payments.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://facebook.com/cellogsmartwear" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/cellogsmartwear" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/cellogsmartwear" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://tiktok.com/@cellogsmartwear" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254780259386" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/products.html">Shop All</a></li>
+                        <li><a href="/products.html?category=men">Men's Wear</a></li>
+                        <li><a href="/products.html?category=women">Women's Wear</a></li>
+                        <li><a href="/products.html?category=kids">Kids Fashion</a></li>
+                        <li><a href="/products.html?category=school">School Items</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/shipping.html">Shipping Policy</a></li>
+                        <li><a href="/returns.html">Returns & Refunds</a></li>
+                        <li><a href="/size-guide.html">Size Guide</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location:</strong>
+                                <p>KOMA Market, Kangundo Road<br>Nairobi, Kenya</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>0780 259 386<br>020 123 4567</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>info@cellogsmartwearkenya.com<br>support@cellogsmartwearkenya.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Business Hours:</strong>
+                                <p>Mon-Sat: 8:00 AM - 8:00 PM<br>Sun: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                        <h5>We Accept:</h5>
+                        <div class="payment-icons">
+                            <span class="payment-icon mpesa" title="M-Pesa"><i class="fas fa-mobile-alt"></i></span>
+                            <span class="payment-icon visa" title="Visa"><i class="fab fa-cc-visa"></i></span>
+                            <span class="payment-icon mastercard" title="MasterCard"><i class="fab fa-cc-mastercard"></i></span>
+                            <span class="payment-icon cash" title="Cash on Delivery"><i class="fas fa-money-bill-wave"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear">2024</span> CELLOGSMARTWEAR KENYA. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <a href="/sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+                <p class="developer-credit">Designed & Developed for Kenya's Online Shopping Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 🛒 Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button class="close-cart" id="closeCart" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <!-- Cart items loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span class="total-amount" id="cartTotalAmount">KES 0</span>
+            </div>
+            <div class="cart-actions">
+                <a href="/cart.html" class="btn btn-outline">View Cart</a>
+                <a href="/checkout.html" class="btn btn-primary">Checkout</a>
+            </div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- ⬆️ Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- 📱 Floating Action Button -->
+    <a href="https://wa.me/254780259386" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/app.js" type="module"></script>
+    <script src="/js/cart.js" type="module"></script>
+    <script src="/js/products.js" type="module"></script>
+    
+    <!-- Initialize Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log('Service Worker Registered'))
+                .catch(err => console.log('Service Worker Registration Failed:', err));
+        }
+        
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Simple Analytics (Privacy-friendly) -->
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>
